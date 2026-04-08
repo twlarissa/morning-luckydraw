@@ -49,6 +49,8 @@
     const IconHeart = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>);
     const IconSun = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>);
     const IconStar = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>);
+    const IconYoutube = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.376.55 9.376.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>);
+    const IconHeadphones = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>);
 
     // --- 瑞莎精選的宇宙指引資料庫 ---
     const quotesData = [
@@ -535,6 +537,60 @@
       }
     ];
 
+    // --- 專屬音頻/影片資料庫 (由靜音靈場/瑞莎聲音魔法師提供) ---
+    const videoDatabase = {
+      '療癒溫柔系': [
+        { id: '7RLyhNKsnmY', title: '12分鐘早晨冥想 | 這份安穩，是我選擇的豐盛' },
+        { id: 'lJy-RqS9ItY', title: '432hz冥想音樂：森林小屋、謐靜時光、紓解壓力' },
+        { id: 'rKVxpX9Bj5o', title: '零極限 5真言｜清理內在阻礙，療癒心靈創傷' },
+        { id: 'h0RNFlPvf1A', title: '冥想引導：零極限Ho’oponopono祈禱文，釋放內在阻礙' },
+        { id: 'PVRCVwbFSV8', title: '【100%深層放鬆】前所未有的修復體驗 | 睡眠瑜珈 身體掃描' },
+        { id: 's3xo0K_sqkk', title: '10分鐘深度睡眠導入冥想 | 睡眠瑜珈【快速掃描・釋放壓力】' },
+        { id: 'zH5S5lnvWqs', title: '第0章：原諒的煉金術 | 純聲冥想引導：讓原諒成為你的光' },
+        { id: 'u2WdH3a5eh4', title: '深度自癒冥想 | 每天15分鐘，啟動肝膽自癒力' },
+        { id: 'oc7FRIA3XeA', title: '30分鐘深度睡眠導入冥想 | 睡眠瑜珈【細胞療癒・靈魂對話】' }
+      ],
+      '吸引力法則': [
+        { id: '6t6QYkypGGk', title: '💰早晨暴富冥想💰【只有極少數運氣爆棚的人才能看見】' },
+        { id: 'qOXLb1uNoOg', title: '“我是創造者” 宣言 顯化你想要的一切 🌟光之工作者必聽!!' },
+        { id: '7UhDnmaBoGU', title: '太神奇了！你會變得富有 —只需聽一次 — 喬·迪斯潘薩' },
+        { id: 'zBYCAaAjXXM', title: '宇宙是你的提款機💰！用聽的加速補足你的財庫！' },
+        { id: '1lqd0Jnlv7s', title: '最強海洋顯化能量，連結宇宙金庫，加速「中獎體質」' },
+        { id: 'TnNDQn_n0Bc', title: '重複這段咒語 39 秒｜但請保密｜一天內見效｜補上能量破洞' },
+        { id: '7RKjkeJnn00', title: '啟動2026奇蹟頻率20分鐘冥想引導' },
+        { id: 'kPeXtPzdCug', title: '吸引無限財富超深度潛意識清理：釋放金錢阻礙與不配得感' },
+        { id: '-54Ka03eN4I', title: '💰財運能量顯化冥想💰【只有極少數的人能連結的靈氣通道】' },
+        { id: 'xo2A7d5qDxo', title: '重複這段豐盛代碼 1 小時｜宇宙直接讓你跨入中獎時空！' }
+      ],
+      '女孩自愛系': [
+        { id: '-Y7TW9Ydk_0', title: '愛自己肯定語冥想｜超快速入眠引導｜心靈SPA級睡眠' },
+        { id: 'DzM3cyBtJH8', title: '幸福冥想，找回力量愛自己｜聆聽斷捨離引導 21 天' },
+        { id: 'co0J4WYI17M', title: '[改寫潛意識] 提升你的配得感, 你值得擁有一切豐盛 ✨' },
+        { id: 'gkonRbtG0ek', title: '19岁华裔花滑冠军的神秘【高頻自我肯定句】' },
+        { id: '5AniFwCeZaE', title: '超猛的愛情能量儀式，吸引喜歡的人主動靠近' }
+      ],
+      '人生智慧系': [
+        { id: 'qtP49PAM39c', title: '15分鐘感恩冥想，21天感恩改變你的世界' },
+        { id: 'AR_L0TVzJQE', title: '每天聽一次讓你的靈魂頻率飆升｜吸引高維智慧下載與宇宙靈感' },
+        { id: '0zKI6p3AxzU', title: '15分鐘感恩冥想，21天感恩轉變你的世界 (睡前深層版)' },
+        { id: 'PyCn1viAuXk', title: '我健康有活力💪！睡覺輕鬆聽，連續21天深植潛意識' },
+        { id: 'HJOTuE7qHkk', title: '祖先早已入輪回轉世，我們年年拜的是誰？ (純聲音．祖先能量清理冥想)' },
+        { id: 'rg0AprpQAqs', title: '冥想引導：13分鐘感恩祖先，為眾生祈福，得愛與光明' },
+        { id: 'vKl1MQ3Ve5s', title: '超慢跑初學專用❤️222｜180BPM 30分鐘｜#健康肯定句' }
+      ],
+      '幽默風趣系': [
+        { id: 'i2vtyUnU0uc', title: '一聽就能顯化！強力吸引力法則，用咖啡冥想為你的夢想加速' },
+        { id: 'aOB0bsjsHJI', title: '1hrs你一定會中大獎，中大樂透中彩票威力彩，幸運的神密之音曝光！' },
+        { id: 'c3NBA5EfVls', title: '🌟突然中大獎！恭喜你！這是中獎頻率與宇宙頻率對齊的結果' },
+        { id: 'oVy4T5vp70s', title: '念這個金錢祈禱 60 秒，但不要告訴任何人，聽說24小時內會出現奇蹟？' },
+        { id: 'Xt7B8TAtElw', title: '【宇宙密碼大全】將這七組數字寫在紙上，讓你把許願池搬回家！' },
+        { id: 'jYBpeAghuro', title: '恭喜你！兩小時內你將顯化一筆橫財' },
+        { id: 'mm0xBUxwNNs', title: '太神奇了！只需聽一次，你會變得富有！為你開啟宇宙收款通道！' },
+        { id: 'jex2FLzwcxY', title: '冥想引導：我是有錢人💰，超級自我肯定句' },
+        { id: 'xfDkQGhurAI', title: '[肯定句] 我很有钱｜国外疯传睡前改写潜意识方法' }
+      ]
+    };
+
     function App() {
       const [currentQuote, setCurrentQuote] = useState(null);
       const [isDrawing, setIsDrawing] = useState(false);
@@ -579,7 +635,15 @@
             attempts++;
           } while (recentIds.includes(nextQuote.id) && attempts < 50);
           
-          setCurrentQuote(nextQuote);
+          // 🌟 從資料庫中隨機挑選一部符合該籤詩能量的影片
+          const matchingVideos = videoDatabase[nextQuote.category];
+          const randomVideo = matchingVideos[Math.floor(Math.random() * matchingVideos.length)];
+          
+          // 把選到的影片跟籤詩綁定在一起
+          setCurrentQuote({
+            ...nextQuote,
+            recommendedVideo: randomVideo
+          });
           
           // 更新記憶魔法：把這次抽到的 ID 放進大腦，並保持只記得最近的 30 個
           setRecentIds(prev => {
@@ -668,6 +732,32 @@
                   </ul>
                 </div>
 
+                {/* --- 🌟 新增：專屬能量音頻推薦區塊 --- */}
+                {currentQuote.recommendedVideo && (
+                  <div className="mt-8 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 border border-purple-300/30 rounded-2xl p-5 hover:bg-white/10 transition-all duration-300 group shadow-lg">
+                    <h3 className="text-purple-200 text-sm md:text-base font-medium tracking-widest mb-3 flex items-center">
+                      <IconHeadphones className="w-5 h-5 mr-2 text-purple-300" />
+                      搭配服用！宇宙專屬調頻音頻：
+                    </h3>
+                    <a 
+                      href={`https://youtu.be/${currentQuote.recommendedVideo.id}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center p-3 md:p-4 bg-black/40 rounded-xl hover:bg-black/60 border border-white/10 transition-all cursor-pointer"
+                    >
+                      <IconYoutube className="w-10 h-10 text-red-500 mr-4 flex-shrink-0 group-hover:scale-110 group-hover:text-red-400 transition-all" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-white/95 text-base md:text-lg font-medium truncate tracking-wide group-hover:text-purple-300 transition-colors">
+                          {currentQuote.recommendedVideo.title}
+                        </p>
+                        <p className="text-white/50 text-xs md:text-sm mt-1.5 tracking-widest flex items-center">
+                          點擊前往靜音靈場收聽 <span className="ml-1 group-hover:translate-x-1 transition-transform">➔</span>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                )}
+
                 <div className="mt-10 flex justify-center">
                   <button
                     onClick={handleDraw}
@@ -686,6 +776,10 @@
 
     // 將我們的魔法注入到畫面中
     const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
     root.render(<App />);
   </script>
 </body>
